@@ -1,0 +1,128 @@
+<!Doctype html>
+    <html>
+     <head>
+       <style>
+
+           body{
+            background-color: #e9e6dd;
+
+           }
+         
+         .flex-a {
+         display: flex;
+         flex-direction: column;
+         flex-flow: column wrap;
+         background-color: #e9e6dd;
+         justify-content: space-between;
+         align-items: center; 
+         margin: 0 -10px;
+         
+         }
+         
+         .InputBox{
+         flex: 2 0 0;
+         width: 100%;
+         margin: 0 5px;
+         padding: 5px;
+         border: solid;
+        
+         } 
+
+         .ImageBox {
+             flex: 0 0 2;
+             width: 100%;
+             margin: 0 5px;
+             padding: 5px;
+             border: solid;
+            }
+
+        img {
+            height: auto;
+            width: auto;
+            max-width: 100%
+           
+
+        }
+    
+        label {
+          color: black;
+          display: table-cell;
+          float: left;
+         }
+         
+         input[type=submit] {
+         font-family : Arial;
+         background-color: #fab207;
+         border: none;
+         color: #222324;
+         padding: 16px 32px;
+         margin: 4px 2px;
+         text-align: center;
+         width: 100%;
+         border-radius: 8px;
+         }
+         
+          input {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 8px;
+      display: inline-block;
+      }
+         
+         /*Tablets & PCs*/
+         @media only screen and (min-width: 768px) {
+           
+         .flex-a {
+         flex-direction: row;
+         justify-content: space-around;
+         }
+         
+         .InputBox{
+             width: 40%;
+            padding: 1.5em;
+           }
+        .ImageBox{
+            padding: 1.5em;
+            width: 50%;
+        }   
+
+        img{
+
+            height: 75%;
+            width: 75%;
+
+        }
+        input [type=submit]{
+            width: 50%;
+        }
+   
+       </style>
+     </head>
+     <body>
+      <h1 style="text-align:center;" id="Download">Download A Brochure</h1>
+       <h4 style="text-align:center;">Fill out the form and you will be able to download a copy of our brochure </h4>
+       <div class ="flex-a">
+         <div class ="InputBox">
+            <form action="https://drewforsyth.companyhub.com/WebToLead/New" method="POST">
+               <input type="hidden" name="redirecturl" value="https://dev.drewforsyth.co.uk/thank-you-brochure-download"/>
+               <input type="hidden" name="ownerid" value="-1"/>
+               <input type="hidden" name="securitytoken" value="ec561722177c44b4ad24cef573d001d3"/>
+               <input type="hidden" name="table" value="Contact"/>
+               <label for="Client name">Full name</label>
+               <input name = "Name" required/><br><br><br>
+               <label for="Email Address">Email Address</label>
+               <input type = "email" name = "Email" required/><br><br><br>
+               <label for="Phone Number">Phone Number</label>
+               <input name = "Phone" /><br><br><br>
+               <input type="submit" name="submit">
+            </form>
+         </div>
+         <div class ="ImageBox">
+            <img src="https://www.paperturn-view.com/?pid=NzQ74700&get_=dbcover&h=600" style="padding: 10px; background-color:black;">
+         </div>
+
+         </div>
+
+     </body>
+    </html>
